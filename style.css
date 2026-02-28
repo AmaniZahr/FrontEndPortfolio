@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Background - أخف قليلاً */
+body {
+  margin: 0;
+  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
+              url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1600&q=80') no-repeat center top;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center top;
+  color: white;
+  will-change: background-position;
+}
+
+.section {
+  padding: 100px 10%;
+  text-align: center;
+  backdrop-filter: blur(4px);
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  width: 100%;
+  padding: 20px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  background: rgba(0,0,0,0.6);
+  z-index: 1000;
+}
+
+.navbar a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #8b5cf6;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 22px;
+  color: #8b5cf6;
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero-content {
+  text-align: center;
+  will-change: transform;
+}
+
+.hero h1 {
+  font-size: 55px;
+}
+
+.hero span {
+  color: #8b5cf6;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 30px;
+  background: #8b5cf6;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #a78bfa;
+  transform: scale(1.05);
+}
+
+/* Skills */
+.skill {
+  margin: 25px 0;
+}
+
+.bar {
+  background: #333;
+  height: 8px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.bar span {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: #8b5cf6;
+  transition: 1.5s ease;
+}
+
+/* Projects */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: rgba(26, 26, 26, 0.85);
+  padding: 30px;
+  border-radius: 15px;
+  transition: 0.4s;
+  backdrop-filter: blur(6px);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* Email */
+.email-link {
+  color: #8b5cf6;
+  text-decoration: none;
+}
+
+.email-link:hover {
+  text-decoration: underline;
+}
+
+/* Contact section - خلفية سوداء */
+#contact {
+  background: #0f0f0f;
+}
+
+/* Reveal Animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: 1s;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Typography */
+@media(max-width:768px){
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .section {
+    padding: 80px 5%;
+  }
+}
